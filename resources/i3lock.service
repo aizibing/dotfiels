@@ -1,0 +1,13 @@
+[Unit]
+Description=i3lock on suspend
+Before=sleep.target
+
+[Service]
+User=aid3n
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/~~~/i3/scripts/i3lock.sh
+
+[Install]
+WantedBy=sleep.target
+
